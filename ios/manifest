@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.4.0
+apiversion: 2
+architectures: arm64 x86_64
+mac: false
+description: UIKit Liquid Glass stacked toasts for iOS 26+
+author: DesignByMind LLC
+license: MIT
+copyright: Copyright (c) 2026 DesignByMind LLC
+
+# these should not be edited
+name: TiToasts
+moduleid: ti.toasts
+guid: 2596eec5-9fd6-4d1d-ad99-f8a7c85e1062
+platform: iphone
+minsdk: 13.4.1.GA

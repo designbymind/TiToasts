@@ -1,0 +1,8 @@
+.DS_Store
+ios/build/
+ios/metadata.json
+**/xcuserdata/
+
+# Keep only the current verified distribution in source control.
+ios/dist/*
+!ios/dist/ti.toasts-iphone-0.4.0.zip
