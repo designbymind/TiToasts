@@ -10,10 +10,6 @@ UIKit Liquid Glass stacked notifications for Titanium on iOS 26+. Module ID:
 `ti.toasts`, version **0.5.0**, built with Titanium SDK 13.4.1.GA.
 No SwiftUI hosting or third-party runtime dependencies.
 
-Inspired by Kavsoft's SToasts sample by Balaji Venkatesh. This module is a UIKit
-implementation of the demonstrated design and behavior; the original SwiftUI
-source is not bundled.
-
 ## Usage
 
 ```javascript
