@@ -348,9 +348,11 @@ private final class ToastCard: UIView, UIGestureRecognizerDelegate {
     layer.shadowOpacity = 0.06
     layer.shadowRadius = 5
     layer.shadowOffset = CGSize(width: 0, height: 10)
-    action.backgroundColor = .systemRed
-    action.tintColor = .white
-    action.setImage(UIImage(systemName: "checkmark"), for: .normal)
+    action.backgroundColor = TiUtils.colorValue(toast.value(forKey: "actionBackgroundColor"))?.color ?? .systemRed
+    action.tintColor = TiUtils.colorValue(toast.value(forKey: "actionSymbolColor"))?.color ?? .white
+    let actionSymbol = TiUtils.stringValue(toast.value(forKey: "actionSymbol")) ?? "checkmark"
+    let actionImage = UIImage(systemName: actionSymbol) ?? UIImage(systemName: "checkmark")
+    action.setImage(actionImage?.withRenderingMode(.alwaysTemplate), for: .normal)
     action.accessibilityLabel = "Dismiss notification"
     action.addTarget(self, action: #selector(completeAction), for: .touchUpInside)
     action.alpha = 0

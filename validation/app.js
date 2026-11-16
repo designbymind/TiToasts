@@ -1,4 +1,4 @@
-// Run as the Resources/app.js of a Classic Titanium app with ti.toasts 0.4.0.
+// Run as the Resources/app.js of a Classic Titanium app with ti.toasts 0.5.0.
 // Checks the JS/native bridge, completion ordering, one-shot behavior and teardown.
 var Toasts = require('ti.toasts');
 var window = Ti.UI.createWindow({ backgroundColor: '#F2F2F7' });
@@ -122,7 +122,8 @@ async function run() {
     // Leave a plain-window safe-area preview visible after the assertions.
     stack.position = 'top';
     stack.topOffset = 0;
-    stack.showToast(Toasts.createToast({ title: 'Top safe area', message: 'iOS ' + Ti.Platform.version }));
+    stack.showToast(Toasts.createToast({ title: 'Top safe area', message: 'Swipe for a blue/yellow trash action',
+      actionSymbol: 'trash', actionBackgroundColor: '#007AFF', actionSymbolColor: '#FFD60A' }));
   } catch (error) {
     result.text = 'FAIL · ' + error.message;
     Ti.API.error('[TiToasts validation] ' + error.message + '\n' + error.stack);

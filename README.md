@@ -1,7 +1,7 @@
 # TiToasts
 
 UIKit Liquid Glass stacked notifications for Titanium on iOS 26+. Module ID:
-`ti.toasts`, version **0.4.0**, built with Titanium SDK 13.4.1.GA.
+`ti.toasts`, version **0.5.0**, built with Titanium SDK 13.4.1.GA.
 No SwiftUI hosting or third-party runtime dependencies.
 
 Inspired by Kavsoft's SToasts sample by Balaji Venkatesh. This module is a UIKit
@@ -25,6 +25,9 @@ window.addEventListener('open', function () {
         title: 'Success',
         message: 'Your changes have been saved.',
         tintColor: '#34C759',
+        actionSymbol: 'checkmark',
+        actionBackgroundColor: '#007AFF',
+        actionSymbolColor: '#FFFFFF',
         duration: 5000,
         dismissOnClick: false
     });
@@ -72,6 +75,13 @@ time; recreate a toast to change its content after showing it.
 | `tintColor` | system green | Icon color and subtle vertical color wash |
 | `duration` | `0` | Milliseconds until auto-dismiss; 0 disables it |
 | `dismissOnClick` | `false` | Remove after firing `click` when tapped |
+| `actionSymbol` | `checkmark` | Action SF Symbol name; unavailable/invalid symbols fall back to checkmark |
+| `actionBackgroundColor` | system red | Action button background color |
+| `actionSymbolColor` | white | Action symbol foreground color; symbols render as a single-color template |
+
+Action appearance is captured when a toast is shown, independently of its
+leading icon and `tintColor`. Changing the action icon or colors keeps the
+existing dismissal behavior and `completed` reason (`action` or `swipe`).
 
 Set `stack.position = 'top'` to anchor below the hosting view's top safe area.
 In a navigation window, this respects the navigation bar's safe area as well.
@@ -127,9 +137,18 @@ of visual acceptance.
 <View id="stack" module="ti.toasts" width="Ti.UI.FILL" height="Ti.UI.FILL" />
 ```
 
-Use `$.stack.showToast(toast)` from the controller. AlloyTestApp includes a
-`toasts/index` demo with three sample messages, automatic dismissal, tap behavior,
-live glass tint, appearance controls, and an event log.
+Use `$.stack.showToast(toast)` from the controller. A standalone Alloy example,
+adapted from AlloyTestApp's `toasts/index` component, is bundled in
+`example/alloy/` in both the repository and the module ZIP. It includes three
+sample messages, automatic dismissal, tap behavior, live glass tint, action
+symbol/color controls, appearance controls, and an event log. Copy the example
+out of the installed module directory and extract the module ZIP into its root
+for an app-local installation, then run `ti build -p ios --target simulator`.
+See the bundled `example/alloy/README.md` for setup and component reuse.
+The stack overlays the full-height ScrollView. Automatic safe-area insets and
+scrollable spacers at the active stack edge let the first/last controls scroll
+clear of the capsules while content can still move behind the glass. Empty areas
+of the stack pass touches through to the ScrollView.
 
 ## Build
 
@@ -137,4 +156,4 @@ live glass tint, appearance controls, and an event log.
 ti build -p ios --build-only --project-dir ./ios --sdk 13.4.1.GA
 ```
 
-The module archive is written to `ios/dist/ti.toasts-iphone-0.4.0.zip`.
+The module archive is written to `ios/dist/ti.toasts-iphone-0.5.0.zip`.

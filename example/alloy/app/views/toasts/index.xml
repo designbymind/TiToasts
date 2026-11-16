@@ -1,0 +1,38 @@
+<Alloy>
+	<NavigationWindow id="navigation" onClose="onProjectClosed">
+		<Window id="window" title="Toasts" onOpen="onOpened">
+			<RightNavButton><Button id="positionButton" title="Bottom" onClick="togglePosition" /></RightNavButton>
+			<LeftNavButton><Button title="Example" onClick="closeProject" /></LeftNavButton>
+			<ScrollView id="scroll">
+				<View id="topSpacer" />
+				<Label id="sectionTitleTop" class="sectionTitle" text="USAGE" />
+				<Label id="usage" class="panel" />
+				<Label id="tintLabel" class="sectionTitle" text="GLASS TINT OPACITY · 0.00" />
+				<View class="panel controlRow"><Slider id="tint" min="0" max="1" value="0" onChange="changeTint" /></View>
+				<View class="panel controlRow">
+					<Label class="rowLabel" text="Add Auto Dismiss (5 seconds)" />
+					<Switch id="automatic" value="false" />
+				</View>
+				<View class="panel controlRow">
+					<Label class="rowLabel" text="Dismiss when tapped" />
+					<Switch id="dismissOnClick" value="false" />
+				</View>
+				<View class="panel controlRow">
+					<Label class="rowLabel" text="Slight entrance bounce" />
+					<Switch id="bounce" value="false" onChange="changeBounce" />
+				</View>
+				<Label class="sectionTitle" text="ACTION APPEARANCE · NEW TOASTS" />
+				<Button id="actionSymbolButton" class="action panel" title="Action symbol: checkmark" onClick="changeActionSymbol" />
+				<Button id="actionBackgroundButton" class="action panel" title="Action background: Red" onClick="changeActionBackground" />
+				<Button id="actionSymbolColorButton" class="action panel" title="Action symbol color: White" onClick="changeActionSymbolColor" />
+				<Button class="action panel" title="Add Toast" onClick="addToast" />
+				<Button class="action panel" title="Dismiss All" onClick="dismissAll" />
+				<Button class="action panel" title="Appearance: System" onClick="cycleAppearance" />
+				<Label id="help" class="sectionTitle" text="Action settings apply to new toasts. Swipe left to reveal the action, or swipe fully to dismiss. Scroll content behind the capsules to reach covered controls." />
+				<Label id="events" class="panel" text="Events will appear here." />
+				<View id="bottomSpacer" />
+			</ScrollView>
+			<View id="stack" module="ti.toasts" />
+		</Window>
+	</NavigationWindow>
+</Alloy>

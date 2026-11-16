@@ -2,7 +2,12 @@
 ios/build/
 ios/metadata.json
 **/xcuserdata/
+example/alloy/build/
+example/alloy/Resources/
+example/alloy/modules/
+example/alloy/i18n/
+example/alloy/.module-install-backups/
 
 # Keep only the current verified distribution in source control.
 ios/dist/*
-!ios/dist/ti.toasts-iphone-0.4.0.zip
+!ios/dist/ti.toasts-iphone-0.5.0.zip

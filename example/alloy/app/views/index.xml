@@ -1,0 +1,9 @@
+<Alloy>
+    <Window id="index">
+        <View id="intro">
+            <Label id="title" text="TiToasts 0.5.0" />
+            <Label id="description" text="Explore Liquid Glass toasts, customize swipe actions, and switch between top and bottom stacks." />
+            <Button id="openButton" title="Open Toast Demo" onClick="openDemo" />
+        </View>
+    </Window>
+</Alloy>

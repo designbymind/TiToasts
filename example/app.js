@@ -15,7 +15,8 @@ positionButton.addEventListener('click', function () {
 add.addEventListener('click', function () {
     var toast = Toasts.createToast({
         title: 'Success', message: 'Your changes have been saved.',
-        symbol: 'checkmark.circle.fill', tintColor: '#34C759', duration: 5000
+        symbol: 'checkmark.circle.fill', tintColor: '#34C759', duration: 5000,
+        actionSymbol: 'trash', actionBackgroundColor: '#007AFF', actionSymbolColor: '#FFD60A'
     });
     toast.addEventListener('click', function (event) { Ti.API.info('click ' + event.id); });
     toast.addEventListener('completed', function (event) { Ti.API.info('completed ' + event.reason); });

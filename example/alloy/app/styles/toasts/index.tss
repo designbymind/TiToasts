@@ -1,0 +1,15 @@
+'#window': { backgroundColor: 'transparent', extendSafeArea: true, extendEdges: [1, 4], includeOpaqueBars: true, translucent: true, autoAdjustScrollViewInsets: true }
+'#scroll': { backgroundColor: '#F2F2F7', layout: 'vertical', contentHeight: Ti.UI.SIZE, contentWidth: Ti.UI.FILL, width: Ti.UI.FILL, height: Ti.UI.FILL, top: 0, bottom: 0, left: 0, right: 0, showVerticalScrollIndicator: true }
+'.sectionTitle': { top: 24, left: 30, right: 30, height: Ti.UI.SIZE, color: '#8E8E93', font: { fontSize: 12 } }
+'.panel': { top: 10, left: 16, right: 16, borderRadius: 24, backgroundColor: '#FFFFFF', height: Ti.UI.SIZE }
+'#usage': { font: { fontFamily: 'Menlo', fontSize: 11 }, left: 16, right: 16, height: 110, textAlign: 'center' }
+'.controlRow': { height: 52 }
+'.rowLabel': { left: 16, right: 76, font: { fontSize: 15 }, color: '#000000' }
+'Switch': { right: 12 }
+'#tint': { left: 16, right: 16 }
+'.action': { height: 50, color: '#007AFF', font: { fontSize: 16 } }
+'#events': { height: 120, color: '#8E8E93', font: { fontFamily: 'Menlo', fontSize: 11 }, textAlign: 'left', verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP, bottom: 24 }
+'#stack': { width: Ti.UI.FILL, height: Ti.UI.FILL, top: 0, bottom: 0, left: 0, right: 0, zIndex: 10, glassTintOpacity: 0, softBackground: true }
+
+'#topSpacer': { width: Ti.UI.FILL, height: 0, touchEnabled: false }
+'#bottomSpacer': { width: Ti.UI.FILL, height: 0, touchEnabled: false }

@@ -1,0 +1,5 @@
+'#index': { backgroundColor: '#F2F2F7' }
+'#intro': { layout: 'vertical', height: Ti.UI.SIZE, left: 24, right: 24 }
+'#title': { color: '#000000', font: { fontSize: 28, fontWeight: 'bold' }, height: Ti.UI.SIZE, textAlign: 'center' }
+'#description': { top: 16, color: '#3C3C43', font: { fontSize: 17 }, height: Ti.UI.SIZE, textAlign: 'center' }
+'#openButton': { top: 24, height: 52, color: '#007AFF', font: { fontSize: 18 } }
