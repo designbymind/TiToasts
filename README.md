@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ti-toasts-hero-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/ti-toasts-hero-light.png">
+  <img alt="An example guide of how to properly use the drag-to-dismiss gesture" src="assets/ti-dragtodismisshero-light.png" width="768">
+</picture>
+
 # TiToasts
 
 UIKit Liquid Glass stacked notifications for Titanium on iOS 26+. Module ID:
